@@ -1,0 +1,210 @@
+/* Variables CSS requeridas por el profesor */
+:root {
+    --color-fondo: #e8ebf0;
+    --color-seccion: #ffffff;
+    --color-texto: #333333;
+    --color-primario: #2c3e50;
+    --color-acento: #3498db;
+    --color-hover: #2980b9;
+    --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Tipografía */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+/* Encabezado y Navegación */
+header {
+    background-color: var(--color-primario);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 0 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+/* Requisito: efecto :hover */
+nav a:hover {
+    color: var(--color-acento);
+}
+
+/* Secciones Generales */
+section {
+    background-color: var(--color-seccion); /* Fondo blanco */
+    padding: 50px 40px; /* Espacio interno de la tarjeta */
+    text-align: center;
+    max-width: 900px;
+    margin: 40px auto; /* El '40px' separa una tarjeta de otra verticalmente */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* Efecto de sombra flotante */
+    scroll-margin-top: 100px; /* Evita que el menú tape el contenido en web */
+}
+
+h2 {
+    color: var(--color-primario);
+    margin-bottom: 20px;
+}
+
+/* Sección Inicio */
+.img-perfil {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-top: 20px;
+    border: 4px solid var(--color-acento);
+}
+
+/* Habilidades */
+.lista-habilidades {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.lista-habilidades li {
+    background-color: var(--color-primario);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Proyectos */
+.contenedor-proyectos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.tarjeta-proyecto {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.tarjeta-proyecto img {
+    width: 100%;
+    border-radius: 5px;
+    margin: 15px 0;
+}
+
+.enlace-btn {
+    display: inline-block;
+    background-color: var(--color-acento);
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.enlace-btn:hover {
+    background-color: var(--color-hover);
+}
+
+/* Formulario de Contacto */
+.formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.formulario-contacto input, 
+.formulario-contacto textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.formulario-contacto button {
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.formulario-contacto button:hover {
+    background-color: var(--color-acento);
+}
+
+/* Pie de página */
+footer {
+    background-color: var(--color-primario);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer a {
+    color: var(--color-acento);
+    text-decoration: none;
+}
+
+/* --- DISEÑO RESPONSIVO (MÓVILES) --- */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column; 
+        gap: 10px;
+    }
+
+    nav a {
+        display: block; 
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.05); 
+        border-radius: 5px;
+    }
+    
+    .img-perfil {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .img-perfil {
+        width: 150px;
+        height: 150px;
+    }
+
+    section {
+        margin: 20px 15px; /* Añade margen a los lados en pantallas pequeñas */
+        padding: 40px 20px; /* Reduce un poco el relleno interno */
+        scroll-margin-top: 250px; 
+    }
+}
